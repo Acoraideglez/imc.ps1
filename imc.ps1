@@ -1,15 +1,3 @@
-<#
-.DESCRIPTION
-    Calcular el indice de masa corporal:
-    IMC=peso/(altura2) altura en metros
-.EXAMPLE
-    \IMC.ps1
-    ¿Peso? ---> 82
-    ¿Altura (cm)? 175
-    tu IMC es 26.8
-    [Bajo Peso|sobrepeso|obeso|normal]
-#>
-
 Param(
     [FLOAT] $peso,
     [FlOAT] $altura
@@ -26,7 +14,7 @@ Write-host "Tu IMC es: " $imc
 
 
 if ( $imc -le 18.5 ) {
-    write-host "Bajo Peso" 
+    write-host "Necesitas más peso" 
 }
 elseif ( $imc -ge 18.5 -and $imc -le 25) {
     write-host "Estás normal" 
